@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>Hi</pattern>
+        <template>
+            <random>
+                <li>Hello</li>
+                <li>Good to see You</li>
+                <li>Hi there</li>
+                <li>Hello World</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Role a Dice</pattern>
+        <template>
+            <random>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Test</pattern>
+        <template>
+            <random>
+                <li>Ram</li>
+                <li>Sam</li>
+                <li>Joy</li>
+            </random> ate a <random>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Water Mellon</li>
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Choose Name</pattern>
+        <template>
+            <think>
+            <set name="person">
+            <random>
+                <li>Pritam</li>
+                <li>Pappu</li>
+                <li>Souvik</li>
+            </random>
+            </set>
+            </think>
+            The person I choose was : <get name="person"/>.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I Ate *</pattern>
+        <template>
+            That sounds yummy
+            <think><set name="food"><star/></set></think>
+        </template>
+    </category>
+    <category>
+        <pattern>What food do i like</pattern>
+        <template>
+            Well earlier you ate <get name="food"/>.So I assume you like that.
+        </template>
+    </category>
+<category>
+    <pattern>Ask me a question</pattern>
+    <template>
+        Do you like <random>
+            <li>Grapes</li>
+            <li>Orange</li>
+            <li>Apple</li>
+        </random>
+    </template>
+</category>
+<category>
+    <pattern>Ask me another question</pattern>
+    <template>
+        Do you like car?
+    </template>
+</category>
+<category>
+    <that>Do you like *</that>
+    <pattern>Yes</pattern>
+    <template>
+        Me too, Sounds Good. What do you like best about <thatstar/>?
+    </template>
+</category>
+<category>
+     <that>Do you like *</that>
+    <pattern>No</pattern>
+    <template>
+        It's acidic.But i prefer it for my health.
+    </template>
+</category>
+  <category>
+      <pattern>My Name is * *</pattern>
+      <template>Hello <star/> . How are you Mr./Mrs. <star index="2"/>?</template>
+  </category>
+  <category>
+      <pattern>My Name is * *</pattern>
+      <template>Hello <set name="firstname"><star/></set> <set name="surname"><star index="2"/></set></template>
+  </category>
+  <category>
+      <pattern>What is My First Name</pattern>
+      <template>Your First Name is <get name="firstname"/></template>
+  </category>
+  <category>
+      <pattern>What is My SurName</pattern>
+      <template>Your SurName is <get name="surname"/></template>
+  </category>
+  <category>
+      <pattern>My Name is</pattern>
+      <template>Your Name is <get name="firstname"/> <get name="surname"/></template>
+  </category>
+</aiml>

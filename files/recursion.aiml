@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<category>
+	    <pattern>Hello</pattern>
+	    <template>Hi there</template>
+    </category>
+    <category>
+        <pattern>Hi</pattern>
+        <template><srai>Hello</srai></template>
+    </category>
+    <category>
+        <pattern>Howdy</pattern>
+        <template><srai>Hello</srai></template>
+    </category>
+    <category>
+        <pattern>What is your name</pattern>
+        <template>My name is Chattybot</template>
+    </category>
+    <category>
+        <pattern>Can you tell me your name</pattern>
+        <template><srai>What is your name</srai></template>
+    </category>
+</aiml>
